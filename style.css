@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Education {
+    position: relative;
+}
+
+.verticalLine {
+    width: 2px;
+    min-height: 150vb;
+    background-color: #eee;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+    border-left: 2px #eee;
+}
+
+.EducationTextbox {
+    background-color: #eee;
+    padding: 10px 30px;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.educationIcon {
+    position: absolute;
+    top: 35%;
+    right: -10%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ff9000;
+    z-index: 100;
+}
+
+.component {
+    display: grid;
+    position: relative;
+    height: 200px;
+    width: 45%;
+    justify-items: end;
+    padding-right: 20px;
+}
+.progressCircle{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+.innerCircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background: conic-gradient(#ff9000 3.6deg, #eee 0deg);
+}
+.innerCircle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.percentage,
+.skillTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 100;
+    
+}
+.percentage{
+    top: 40%;
+}
+.skillTitle{
+    top: 60%;
+}
