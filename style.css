@@ -3,11 +3,11 @@
     padding: 0;
 }
 
-.Education {
+.Education, .Experience {
     position: relative;
 }
 
-.verticalLine {
+.verticalLine, .ExperienceverticalLine {
     width: 2px;
     min-height: 150vb;
     background-color: #eee;
@@ -19,7 +19,7 @@
     border-left: 2px #eee;
 }
 
-.EducationTextbox {
+.EducationTextbox,.ExperienceTextbox {
     background-color: #eee;
     padding: 10px 30px;
     width: fit-content;
@@ -29,7 +29,7 @@
     border-radius: 10px;
 }
 
-.educationIcon {
+.educationIcon, .ExperienceIcon {
     position: absolute;
     top: 35%;
     right: -10%;
@@ -59,7 +59,16 @@
     border-radius: 50%;
     position: relative;
     background: conic-gradient(#ff9000 3.6deg, #eee 0deg);
+    transition: all 0.5s;
+    animation: skillAnimation 0.3s ease-in-out linear;
 }
+
+@keyframes skillAnimation {
+    to{
+        background: conic-gradient(#ff9000 50%, #eee 0deg);
+    }
+}
+
 .innerCircle::before {
     content: "";
     position: absolute;

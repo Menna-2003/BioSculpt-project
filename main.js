@@ -1,3 +1,60 @@
+let Experience = document.createElement("div");
+let ExperienceTextbox = document.createElement("p");
+let ExperienceText = document.createTextNode("Experience");
+let ExperienceverticalLine = document.createElement("div");
+
+Experience.className = "Experience";
+ExperienceTextbox.className = "ExperienceTextbox";
+ExperienceverticalLine.className = "ExperienceverticalLine";
+
+ExperienceTextbox.appendChild(ExperienceText);
+Experience.appendChild(ExperienceverticalLine);
+
+for (let i = 0; i < 5; i++) {
+    let component = document.createElement("div");
+    let title = document.createElement("h1");
+    let date = document.createElement("p");
+    let description = document.createElement("p");
+    let ExperienceIcon = document.createElement("i");
+
+    component.className = "component";
+    title.className = "title";
+    date.className = "date";
+    description.className = "description";
+    ExperienceIcon.className = "ExperienceIcon";
+
+    if (i % 2 !== 0) {
+        component.style.justifyItems = "start";
+        component.style.width = "44%";
+        component.style.marginLeft = "54%";
+        component.style.paddingLeft = "20px";
+        component.style.paddingRight = "0";
+        ExperienceIcon.style.left = "-11%";
+    }
+
+    let titleText = document.createTextNode(` title ${i + 1}`);
+    let dateText = document.createTextNode(` date ${i + 1}`);
+    let descriptionText = document.createTextNode(` desc ${i + 1}`);
+
+    title.appendChild(titleText);
+    date.appendChild(dateText);
+    description.appendChild(descriptionText);
+
+    component.appendChild(title);
+    component.appendChild(date);
+    component.appendChild(description);
+    component.appendChild(ExperienceIcon);
+
+    Experience.prepend(component);
+}
+
+Experience.prepend(ExperienceTextbox);
+
+document.body.prepend(Experience);
+
+
+// ----------------------------------------------------------------------
+
 let Education = document.createElement("div");
 let EducationTextbox = document.createElement("p");
 let EducationText = document.createTextNode("Education");
