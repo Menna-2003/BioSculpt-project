@@ -5,9 +5,12 @@
 }
 .about {
     margin: 0 50px;
-    padding: 50px;
+    padding: 0;
     display: grid;
+    gap: 40px;
     color: rgb(77, 77, 77);
+    height: 100vb;
+    align-content: center;
 }
 .about .top {
     margin-bottom: 30px;
