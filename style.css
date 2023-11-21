@@ -4,7 +4,7 @@
     font-family: "Space Mono", monospace;
 }
 .about {
-    margin: 0 50px;
+    margin: 0 100px;
     padding: 0;
     display: grid;
     gap: 40px;
@@ -26,6 +26,7 @@
     display: flex;
     font-size: 15px;
 }
+
 .about .info {
     display: flex;
     gap: 20px;
@@ -53,6 +54,9 @@
     gap: 15px;
     width: 65%;
     height: auto;
+}
+.about .right p{
+    max-width: 800px;
 }
 .about .right h2 {
     color: black;
