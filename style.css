@@ -7,7 +7,7 @@
     padding: 50px;
     display: grid;
     font-family: "Space Mono", Arial, serif;
-    color:rgb(77, 77,77)
+    color:rgb(77, 77,77);
 }
 .top{
     padding: 20px;
@@ -21,6 +21,7 @@
  width: 100%;
  height: auto;
  display: flex;
+ font-size: 20px;
 }
 .left{
     padding: 30px;
@@ -36,7 +37,26 @@ ul{
 }
 .item{
     display: flex;
+    font-size: 50px;
 }
 li{
     padding: 5px;
+}
+.project{
+    margin: 50px;
+    padding: 50px;
+    display: grid;
+    font-family: "Space Mono", Arial, serif;
+    color:rgb(77, 77,77);
+    background-color: orange;
+    font-size: 20px;
+}
+.topp{
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.work{
+    padding: 20px;
 }
