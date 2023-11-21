@@ -52,7 +52,6 @@ Experience.prepend(ExperienceTextbox);
 
 document.body.prepend(Experience);
 
-
 // ----------------------------------------------------------------------
 
 let Education = document.createElement("div");
@@ -109,23 +108,43 @@ Education.prepend(EducationTextbox);
 
 document.body.prepend(Education);
 
-let progressCircle = document.createElement("div");
-let innerCircle = document.createElement("div");
-let percentage = document.createElement("span");
-let skillTitle = document.createElement("span");
+// ---------------------------------------------------
+let skills = document.querySelector(".skills");
 
-let percentageText = document.createTextNode("0%");
-let skillTitleText = document.createTextNode("skill");
+for (let i = 0; i < 4; i++) {
+    let progressCircle = document.createElement("div");
+    let innerCircle = document.createElement("div");
+    let percentage = document.createElement("span");
+    let skillTitle = document.createElement("span");
 
-progressCircle.className = "progressCircle";
-innerCircle.className = "innerCircle";
-percentage.className = "percentage";
-skillTitle.className = "skillTitle";
+    let percentageText = document.createTextNode("0%");
+    let skillTitleText = document.createTextNode("skill");
 
-percentage.appendChild(percentageText);
-skillTitle.appendChild(skillTitleText);
-progressCircle.appendChild(percentage);
-progressCircle.appendChild(skillTitle);
-progressCircle.appendChild(innerCircle);
+    progressCircle.className = "progressCircle";
+    innerCircle.className = "innerCircle";
+    percentage.className = "percentage";
+    skillTitle.className = "skillTitle";
 
-document.body.append(progressCircle);
+    let progressStartValue = 0,
+        progressEndValue = 90,
+        speed = 100;
+
+    let progress = setInterval(() => {
+        progressStartValue++;
+
+        percentageText.textContent = `${progressStartValue}%`;
+        innerCircle.style.background = `conic-gradient(#ff9000 ${progressStartValue * 3.6}deg, #eee 0deg)`;
+
+        if (progressStartValue === progressEndValue) {
+            clearInterval(progress);
+        }
+        // console.log(progressStartValue);
+    }, speed);
+
+    percentage.appendChild(percentageText);
+    skillTitle.appendChild(skillTitleText);
+    progressCircle.appendChild(skillTitle);
+    progressCircle.appendChild(percentage);
+    progressCircle.appendChild(innerCircle);
+    skills.appendChild(progressCircle);
+}
