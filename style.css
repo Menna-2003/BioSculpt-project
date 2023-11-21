@@ -64,12 +64,10 @@
 .Home .icons {
     z-index: 5;
     color: white;
-    font-size: 20px;
-}
-.Home .icons i {
-    padding: 10px;
-    margin: 20px;
-    font-size: 40px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 .about {
     margin: 0 100px;
