@@ -50,7 +50,7 @@ for (let i = 0; i < 5; i++) {
 
 Experience.prepend(ExperienceTextbox);
 
-document.body.prepend(Experience);
+document.body.appendChild(Experience);
 
 // ----------------------------------------------------------------------
 
@@ -106,7 +106,7 @@ for (let i = 0; i < 5; i++) {
 
 Education.prepend(EducationTextbox);
 
-document.body.prepend(Education);
+document.body.appendChild(Education);
 
 // ---------------------------------------------------
 let skills = document.querySelector(".skills");
