@@ -1,62 +1,91 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    font-family: "Space Mono", monospace;
 }
-.about{
-    margin: 50px;
+.about {
+    margin: 0 50px;
     padding: 50px;
     display: grid;
-    font-family: "Space Mono", Arial, serif;
-    color:rgb(77, 77,77);
+    color: rgb(77, 77, 77);
 }
-.top{
-    padding: 20px;
- text-align: center;
- width: 100%;
- height: auto;
-}
-.down{
-    padding: 20px;
+.about .top {
+    margin-bottom: 30px;
     text-align: center;
- width: 100%;
- height: auto;
- display: flex;
- font-size: 20px;
-}
-.left{
-    padding: 30px;
-    width: 50%;
     height: auto;
-}
-.right{
-    width: 50%;
-    height: auto;
-}
-ul{
-    list-style: none;
-}
-.item{
-    display: flex;
-    font-size: 50px;
-}
-li{
-    padding: 5px;
-}
-.project{
-    margin: 50px;
-    padding: 50px;
-    display: grid;
-    font-family: "Space Mono", Arial, serif;
-    color:rgb(77, 77,77);
-    background-color: orange;
     font-size: 20px;
+    color: black;
 }
-.topp{
+.about .down {
     padding: 20px;
-    text-align: center;
     width: 100%;
     height: auto;
+    display: flex;
+    font-size: 15px;
 }
-.work{
+.about .info {
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+}
+.about .firstBlock {
+    width: 50%;
+}
+.about .firstBlock,
+.about .secondBlock {
+    display: grid;
+    gap: 20px;
+}
+.about .left {
+    padding: 30px;
+    width: 35%;
+    height: auto;
+}
+.about .left .first-block {
+    color: black;
+    text-transform: uppercase;
+}
+.about .right {
+    display: grid;
+    gap: 15px;
+    width: 65%;
+    height: auto;
+}
+.about .right h2 {
+    color: black;
+}
+.about ul {
+    list-style: none;
+}
+.about .item {
+    display: flex;
+    font-size: 50px;
+    gap: 20px;
+}
+.about .item i {
+    font-size: 30px;
+    color: black;
+}
+.project {
+    padding: 50px;
+    display: grid;
+    color: #fff;
+    background-color: orange;
+    font-size: 20px;
+    overflow: hidden;
+}
+.project .topp {
+    padding: 0px 0px 55px 0;
+    text-align: center;
+    width: 100%;
+    /* height: auto; */
+}
+.project .work {
     padding: 20px;
+    gap: 20px;
+}
+.project .firstBlock,
+.project .secondBlock {
+    display: grid;
+    gap: 20px;
 }
