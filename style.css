@@ -62,10 +62,7 @@
     text-align: center;
 }
 .Home .icons {
-    /* position: absolute; */
     z-index: 5;
-    /* top: 80%;
-    left: 37%; */
     color: white;
     font-size: 20px;
 }
@@ -148,7 +145,7 @@
     padding: 50px;
     display: grid;
     color: #fff;
-    background-color: orange;
+    background-color: #ff9000;
     font-size: 20px;
     overflow: hidden;
 }
@@ -166,16 +163,14 @@
     display: grid;
     gap: 20px;
 }
-
 .Education,
 .Experience {
     position: relative;
 }
-
 .verticalLine,
 .ExperienceverticalLine {
     width: 2px;
-    min-height: 150vb;
+    min-height: 160vb;
     background-color: #eee;
     position: absolute;
     top: 40px;
@@ -184,7 +179,6 @@
     transform: translateX(-50%);
     border-left: 2px #eee;
 }
-
 .EducationTextbox,
 .ExperienceTextbox {
     background-color: #eee;
@@ -195,7 +189,6 @@
     margin: 50px auto;
     border-radius: 10px;
 }
-
 .educationIcon,
 .ExperienceIcon {
     position: absolute;
@@ -207,7 +200,6 @@
     background-color: #ff9000;
     z-index: 100;
 }
-
 .component {
     display: grid;
     position: relative;
@@ -217,20 +209,20 @@
     padding-right: 20px;
 }
 .skillsContainer {
-    margin-top: 60px;
+    margin: 100px 30px 180px 30px;
     display: grid;
     justify-items: center;
     gap: 50px;
 }
 .skillsContainer h1 {
     width: fit-content;
+    margin: 0 0 30px 0;
 }
 .skills {
     display: flex;
     gap: 50px;
     justify-content: center;
 }
-
 .progressCircle {
     position: relative;
     width: fit-content;
@@ -245,7 +237,6 @@
     background: conic-gradient(#ff9000 3.6deg, #eee 0deg);
     transition: all 0.5s;
 }
-
 .innerCircle::before {
     content: "";
     position: absolute;

@@ -1,14 +1,7 @@
-let Experience = document.createElement("div");
-let ExperienceTextbox = document.createElement("p");
-let ExperienceText = document.createTextNode("Experience");
-let ExperienceverticalLine = document.createElement("div");
-
-Experience.className = "Experience";
-ExperienceTextbox.className = "ExperienceTextbox";
-ExperienceverticalLine.className = "ExperienceverticalLine";
-
-ExperienceTextbox.appendChild(ExperienceText);
-Experience.appendChild(ExperienceverticalLine);
+let Experience = document.querySelector(".Experiences");
+let Education = document.querySelector(".Educations");
+let skills = document.querySelector(".skills");
+let project = document.querySelector(".project");
 
 for (let i = 0; i < 5; i++) {
     let component = document.createElement("div");
@@ -47,25 +40,6 @@ for (let i = 0; i < 5; i++) {
 
     Experience.prepend(component);
 }
-
-Experience.prepend(ExperienceTextbox);
-
-document.body.appendChild(Experience);
-
-// ----------------------------------------------------------------------
-
-let Education = document.createElement("div");
-let EducationTextbox = document.createElement("p");
-let EducationText = document.createTextNode("Education");
-let verticalLine = document.createElement("div");
-
-Education.className = "Education";
-EducationTextbox.className = "EducationTextbox";
-verticalLine.className = "verticalLine";
-
-EducationTextbox.appendChild(EducationText);
-Education.appendChild(verticalLine);
-
 for (let i = 0; i < 5; i++) {
     let component = document.createElement("div");
     let title = document.createElement("h1");
@@ -103,15 +77,7 @@ for (let i = 0; i < 5; i++) {
 
     Education.prepend(component);
 }
-
-Education.prepend(EducationTextbox);
-
-document.body.appendChild(Education);
-
-// ---------------------------------------------------
-let skills = document.querySelector(".skills");
-
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 5; i++) {
     let progressCircle = document.createElement("div");
     let innerCircle = document.createElement("div");
     let percentage = document.createElement("span");
@@ -147,4 +113,43 @@ for (let i = 0; i < 4; i++) {
     progressCircle.appendChild(percentage);
     progressCircle.appendChild(innerCircle);
     skills.appendChild(progressCircle);
+}
+for (let i = 0; i < 3; i++) {
+    let work = document.createElement("div");
+    let firstBlock = document.createElement("div");
+    let secondBlock = document.createElement("div");
+    let projectName = document.createElement("div");
+    let projectNameValue = document.createElement("div");
+    let Description = document.createElement("div");
+    let DescraptionValue = document.createElement("div");
+    let Link = document.createElement("div");
+    let LinkValue = document.createElement("div");
+
+    work.className = "work";
+    firstBlock.className = "firstBlock";
+    secondBlock.className = "secondBlock";
+    projectName.className = "projectName";
+    projectNameValue.className = "projectNameValue";
+    Description.className = "Description";
+    DescraptionValue.className = "DescraptionValue";
+    Link.className = "Link";
+    LinkValue.className = "LinkValue";
+
+    let projectNameText = document.createTextNode(`${i + 1} - Project Name : `);
+    let DescriptionText = document.createTextNode("Description : ");
+    let LinkText = document.createTextNode("Link : ");
+
+    projectName.appendChild(projectNameText);
+    Description.appendChild(DescriptionText);
+    Link.appendChild(LinkText);
+
+    firstBlock.appendChild(projectName);
+    firstBlock.appendChild(Description);
+    firstBlock.appendChild(Link);
+    secondBlock.appendChild(projectNameValue);
+    secondBlock.appendChild(DescraptionValue);
+    secondBlock.appendChild(LinkValue);
+    work.appendChild(firstBlock);
+    work.appendChild(secondBlock);
+    project.appendChild(work);
 }
