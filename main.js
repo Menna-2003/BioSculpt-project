@@ -1,16 +1,35 @@
+// Name - specialty - image
+let ExperienceCounter = 3, // &    titleText - dateText - descriptionText
+    EducationCounter = 3, // &    titleText - dateText - descriptionText
+    SkillsCounter = 3, // &     progressEndValue - skillTitleText
+    ProjectsCounter = 3; // &    projectName - Description - Link
+
 let Experience = document.querySelector(".Experiences");
 let Education = document.querySelector(".Educations");
 let skills = document.querySelector(".skills");
 let project = document.querySelector(".project");
+let image = document.querySelector(".center img");
+let userName = document.querySelector(".box h1");
+let specialty = document.querySelector(".box .text");
+let Sname = document.querySelector("Sname");
+let Sphone = document.querySelector("Sphone");
+let Semail = document.querySelector("Semail");
+let Saddress = document.querySelector("Saddress");
+let aboutMe = document.querySelector("aboutMe");
 
-for (let i = 0; i < 5; i++) {
+userName.innerHTML = "Menna Mohamed";
+specialty.innerHTML = "Web developer";
+// image.src = "image.jpg";
+
+// Experience
+for (let i = 0; i < ExperienceCounter; i++) {
     let component = document.createElement("div");
     let title = document.createElement("h1");
     let date = document.createElement("p");
     let description = document.createElement("p");
     let ExperienceIcon = document.createElement("i");
 
-    component.className = "component";
+    component.className = "component textAnimationUP";
     title.className = "title";
     date.className = "date";
     description.className = "description";
@@ -23,6 +42,7 @@ for (let i = 0; i < 5; i++) {
         component.style.paddingLeft = "20px";
         component.style.paddingRight = "0";
         ExperienceIcon.style.left = "-11%";
+        component.classList.add("responsive");
     }
 
     let titleText = document.createTextNode(` title ${i + 1}`);
@@ -40,14 +60,15 @@ for (let i = 0; i < 5; i++) {
 
     Experience.prepend(component);
 }
-for (let i = 0; i < 5; i++) {
+// Education
+for (let i = 0; i < EducationCounter; i++) {
     let component = document.createElement("div");
     let title = document.createElement("h1");
     let date = document.createElement("p");
     let description = document.createElement("p");
     let educationIcon = document.createElement("i");
 
-    component.className = "component";
+    component.className = "component textAnimationUP";
     title.className = "title";
     date.className = "date";
     description.className = "description";
@@ -77,7 +98,8 @@ for (let i = 0; i < 5; i++) {
 
     Education.prepend(component);
 }
-for (let i = 0; i < 5; i++) {
+// Skills
+for (let i = 0; i < SkillsCounter; i++) {
     let progressCircle = document.createElement("div");
     let innerCircle = document.createElement("div");
     let percentage = document.createElement("span");
@@ -92,8 +114,8 @@ for (let i = 0; i < 5; i++) {
     skillTitle.className = "skillTitle";
 
     let progressStartValue = 0,
-        progressEndValue = 90,
-        speed = 100;
+        progressEndValue = 50,
+        speed = 20;
 
     let progress = setInterval(() => {
         progressStartValue++;
@@ -104,7 +126,6 @@ for (let i = 0; i < 5; i++) {
         if (progressStartValue === progressEndValue) {
             clearInterval(progress);
         }
-        // console.log(progressStartValue);
     }, speed);
 
     percentage.appendChild(percentageText);
@@ -114,7 +135,8 @@ for (let i = 0; i < 5; i++) {
     progressCircle.appendChild(innerCircle);
     skills.appendChild(progressCircle);
 }
-for (let i = 0; i < 3; i++) {
+// Projects
+for (let i = 0; i < ProjectsCounter; i++) {
     let work = document.createElement("div");
     let firstBlock = document.createElement("div");
     let secondBlock = document.createElement("div");
@@ -125,7 +147,7 @@ for (let i = 0; i < 3; i++) {
     let Link = document.createElement("div");
     let LinkValue = document.createElement("div");
 
-    work.className = "work";
+    work.className = "work textAnimationUP";
     firstBlock.className = "firstBlock";
     secondBlock.className = "secondBlock";
     projectName.className = "projectName";
@@ -153,3 +175,33 @@ for (let i = 0; i < 3; i++) {
     work.appendChild(secondBlock);
     project.appendChild(work);
 }
+
+// Scroll Animation
+
+let textAnimationUP = document.querySelectorAll(".textAnimationUP");
+window.addEventListener("scroll", () => {
+    let triggerBottom = (window.innerHeight / 5) * 4;
+
+    textAnimationUP.forEach((e) => {
+        let textAnimationTop = e.getBoundingClientRect().top;
+        if (textAnimationTop < triggerBottom) {
+            e.classList.add("textAnimationUPShow");
+        } else {
+            e.classList.remove("textAnimationUPShow");
+        }
+    });
+});
+
+// Nav Bar in responsive
+
+
+let bar = document.querySelector(".bar");
+let nav = document.querySelector("nav");
+
+bar.addEventListener("click", () => {
+    if (nav.classList.contains("show")) {
+        nav.classList.remove("show");
+    } else {
+        nav.classList.add("show");
+    }
+});

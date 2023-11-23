@@ -2,7 +2,56 @@
     margin: 0;
     padding: 0;
     font-family: "Space Mono", monospace;
-    /* box-sizing: border-box; */
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+ul.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+    list-style-type: none;
+    background-color: #d26b00;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+ul.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+ul.nav a:hover {
+    background-color: rgba(255, 127, 47, 0.929);
+    color: black;
+}
+@media (max-width: 850px) {
+    i.bar{
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        font-size: 30px;
+        z-index: 20;
+    }
+    nav {
+        display: none;
+    }
+    .show{
+        display:flex;
+    }
+    .show .nav{
+        display: grid;
+        padding: 55px 0;
+    }
 }
 .Home {
     position: relative;
@@ -92,7 +141,6 @@
     display: flex;
     font-size: 15px;
 }
-
 .about .info {
     display: flex;
     gap: 20px;
@@ -139,6 +187,31 @@
     font-size: 30px;
     color: black;
 }
+
+@media (max-width: 840px) {
+    .about {
+        margin: 50px 10px;
+        gap: 0;
+    }
+    .about .top {
+        margin-bottom: 0;
+    }
+    .about .down {
+        display: grid;
+        gap: 25px;
+        width: 90%;
+    }
+    .about .right {
+        width: 100%;
+    }
+    .about .right p {
+        width: 90%;
+    }
+    .about .left {
+        padding: 25px 0 65px 0px;
+        width: 90%;
+    }
+}
 .project {
     padding: 50px;
     display: grid;
@@ -164,6 +237,9 @@
 .Education,
 .Experience {
     position: relative;
+    padding: 10px 0 0 0;
+    width: 100%;
+    overflow: hidden;
 }
 .verticalLine,
 .ExperienceverticalLine {
@@ -206,8 +282,29 @@
     justify-items: end;
     padding-right: 20px;
 }
+
+.textAnimationUP {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+}
+
+.textAnimationUPShow {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* @media (max-width : 840px) {
+    .responsive{
+        justify-items: start;
+        width: 45%;
+        margin-left: 52%;
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+} */
 .skillsContainer {
-    margin: 100px 30px 180px 30px;
+    margin: 0 30px 180px 30px;
+    padding: 120px 0 0 0;
     display: grid;
     justify-items: center;
     gap: 50px;
@@ -220,6 +317,11 @@
     display: flex;
     gap: 50px;
     justify-content: center;
+}
+@media (max-width: 850px) {
+    .skills {
+        display: grid;
+    }
 }
 .progressCircle {
     position: relative;
