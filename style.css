@@ -9,6 +9,9 @@ html {
 body {
     overflow-x: hidden;
 }
+i.bar {
+    display: none;
+}
 ul.nav {
     position: fixed;
     width: 100%;
@@ -35,7 +38,7 @@ ul.nav a:hover {
     color: black;
 }
 @media (max-width: 850px) {
-    i.bar{
+    i.bar {
         position: fixed;
         right: 20px;
         top: 20px;
@@ -45,10 +48,10 @@ ul.nav a:hover {
     nav {
         display: none;
     }
-    .show{
-        display:flex;
+    .show {
+        display: flex;
     }
-    .show .nav{
+    .show .nav {
         display: grid;
         padding: 55px 0;
     }

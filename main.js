@@ -1,4 +1,5 @@
-// Name - specialty - image
+// Name - specialty - image - phone - email - address - aboutMe
+
 let ExperienceCounter = 3, // &    titleText - dateText - descriptionText
     EducationCounter = 3, // &    titleText - dateText - descriptionText
     SkillsCounter = 3, // &     progressEndValue - skillTitleText
@@ -177,7 +178,6 @@ for (let i = 0; i < ProjectsCounter; i++) {
 }
 
 // Scroll Animation
-
 let textAnimationUP = document.querySelectorAll(".textAnimationUP");
 window.addEventListener("scroll", () => {
     let triggerBottom = (window.innerHeight / 5) * 4;
@@ -193,8 +193,6 @@ window.addEventListener("scroll", () => {
 });
 
 // Nav Bar in responsive
-
-
 let bar = document.querySelector(".bar");
 let nav = document.querySelector("nav");
 
