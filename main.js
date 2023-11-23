@@ -1,4 +1,15 @@
-// Name - specialty - image - phone - email - address - aboutMe
+// userName - id = username
+// specialty - class = specialty
+// image - class = userImg
+// Sphone - class = Sphone
+// Semail = class = Semail
+// Saddress - class = Saddress
+// aboutMe - class = aboutMe
+
+// ExperienceCounter   titleText - dateText - descriptionText
+// EducationCounter   titleText - dateText - descriptionText
+// SkillsCounter    progressEndValue - skillTitleText
+// ProjectsCounter   projectName - Description - Link
 
 let ExperienceCounter = 3, // &    titleText - dateText - descriptionText
     EducationCounter = 3, // &    titleText - dateText - descriptionText
@@ -9,21 +20,21 @@ let Experience = document.querySelector(".Experiences");
 let Education = document.querySelector(".Educations");
 let skills = document.querySelector(".skills");
 let project = document.querySelector(".project");
-let image = document.querySelector(".center img");
-let userName = document.querySelector(".box h1");
-let specialty = document.querySelector(".box .text");
-let Sname = document.querySelector("Sname");
-let Sphone = document.querySelector("Sphone");
-let Semail = document.querySelector("Semail");
-let Saddress = document.querySelector("Saddress");
-let aboutMe = document.querySelector("aboutMe");
+let image = document.querySelector(".userImg");
+let userName = document.querySelector("#username");
+let specialty = document.querySelector(".specialty");
+let Sname = document.querySelector(".Sname");
+let Sphone = document.querySelector(".Sphone");
+let Semail = document.querySelector(".Semail");
+let Saddress = document.querySelector(".Saddress");
+let aboutMe = document.querySelector(".aboutMe");
 
 userName.innerHTML = "Menna Mohamed";
 specialty.innerHTML = "Web developer";
 // image.src = "image.jpg";
 
 // Experience
-for (let i = 0; i < ExperienceCounter; i++) {
+for (let i = 0; i < 3; i++) {
     let component = document.createElement("div");
     let title = document.createElement("h1");
     let date = document.createElement("p");
